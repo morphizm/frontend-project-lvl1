@@ -1,0 +1,22 @@
+{
+  "name": "front-proj-brain-games",
+  "version": "1.0.0",
+  "description": "Brain Games from Hexlet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "brain-games": "src/bin/brain-games.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morphizm/frontend-project-lvl1.git"
+  },
+  "author": "morphizm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morphizm/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/morphizm/frontend-project-lvl1#readme"
+}
