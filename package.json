@@ -1,7 +1,14 @@
 {
   "name": "front-proj-brain-games",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Brain Games from Hexlet",
+  "keywords": [
+    "brain-calc",
+    "brain-even",
+    "brain-gcd",
+    "brain-prime",
+    "brain-progression"
+  ],
   "main": "index.js",
   "scripts": {
     "babel-node": "babel-node",

@@ -1,5 +1,5 @@
 import run from '../index';
-import { generateRandomNumber } from '../utils';
+import generateRandomNumber from '../utils';
 
 const generateSign = (num) => {
   if (num < 10) {

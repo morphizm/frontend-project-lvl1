@@ -1,5 +1,5 @@
 import run from '../index';
-import { generateRandomNumber } from '../utils';
+import generateRandomNumber from '../utils';
 
 const generateProggression = () => {
   const step = generateRandomNumber(1, 30);

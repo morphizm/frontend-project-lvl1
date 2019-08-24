@@ -1,5 +1,5 @@
 import run from '../index';
-import { generateRandomNumber } from '../utils';
+import generateRandomNumber from '../utils';
 
 export default () => {
   const text = 'Find the greatest common divisior of given numbers.';

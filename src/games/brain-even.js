@@ -1,5 +1,5 @@
 import run from '../index';
-import { generateRandomNumber } from '../utils';
+import generateRandomNumber from '../utils';
 
 export default () => {
   const text = 'Answer "yes" if number even otherwise answer "no".';
