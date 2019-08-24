@@ -1,45 +1,31 @@
 import readlineSync from 'readline-sync';
 
-export const brainGames = () => {
+const run = (text, dataToGame, f) => {
   console.log('Welcome to the Brain Games!');
+  console.log(text);
 
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-};
 
-const generateRandomNumber = (interval = 100) => {
-  const simpleRandom = Math.floor(Math.random() * interval);
-  return simpleRandom;
-};
-
-export const brainEven = () => {
-  console.log('Welcome to the Brain Games!');
-  console.log('Answer "yes" if number even otherwise answer "no".');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-
-  const iter = (trueAnswers) => {
+  const iter = (trueAnswers, data) => {
     if (trueAnswers === 3) {
+      // Because game duration = 3 rounds;
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-    const num = generateRandomNumber();
-    console.log(`Question: ${num}`);
+    const [question, ...rest] = data;
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const isEven = num % 2 === 0;
-    if (userAnswer === 'yes' && isEven) {
-      console.log('Correct!');
-      iter(trueAnswers + 1);
+    const correctAnswer = f(rest);
+    if (correctAnswer === userAnswer) {
+      iter(trueAnswers + 1, dataToGame());
       return;
     }
-    if (userAnswer === 'no' && !isEven) {
-      console.log('Correct!');
-      iter(trueAnswers + 1);
-      return;
-    }
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${isEven ? 'yes' : 'no'}.'`);
-    console.log(`Let's try again, ${userName}`);
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    console.log(`Let's try again, ${userName}!`);
   };
   const startCorrectUserAnswer = 0;
-  return iter(startCorrectUserAnswer);
+  return iter(startCorrectUserAnswer, dataToGame());
 };
+
+export default run;
