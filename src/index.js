@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const run = (text, dataToGame, f) => {
+const run = (text, dataToGame, checker) => {
   console.log('Welcome to the Brain Games!');
   console.log(text);
 
@@ -16,7 +16,7 @@ const run = (text, dataToGame, f) => {
     const [question, ...rest] = data;
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = f(rest);
+    const correctAnswer = checker(rest);
     if (correctAnswer === userAnswer) {
       iter(trueAnswers + 1, dataToGame());
       return;

@@ -17,3 +17,7 @@ $ npm install front-proj-brain-games
 ## brain-calc
 
 [![asciicast](https://asciinema.org/a/wheKU6vKfmbgwo8qjdog30Xxa.svg)](https://asciinema.org/a/wheKU6vKfmbgwo8qjdog30Xxa)
+
+## brain-gcd
+
+[![asciicast](https://asciinema.org/a/rGNKcbVZ31z9XcxioRsstXgrg.svg)](https://asciinema.org/a/rGNKcbVZ31z9XcxioRsstXgrg)

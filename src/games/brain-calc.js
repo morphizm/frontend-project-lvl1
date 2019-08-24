@@ -13,14 +13,14 @@ const generateSign = (num) => {
 
 export default () => {
   const text = 'What is result of the expression?';
-  const data = () => {
+  const dataToGame = () => {
     const num1 = generateRandomNumber();
     const num2 = generateRandomNumber();
     const sign = generateSign(num1);
     const question = `${num1} ${sign} ${num2}`;
     return [question, num1, num2, sign];
   };
-  const f = (array) => {
+  const checker = (array) => {
     const [num1, num2, sign] = array;
     if (sign === '+') {
       return String(num1 + num2);
@@ -30,5 +30,5 @@ export default () => {
     }
     return String(num1 * num2);
   };
-  return run(text, data, f);
+  return run(text, dataToGame, checker);
 };

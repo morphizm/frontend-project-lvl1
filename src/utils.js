@@ -6,6 +6,6 @@ export const generateRandomNumber = (start = 0, end = 100) => {
   return simpleRandom;
 };
 
-export const s = () => {
-  return;
+export const func = () => {
+  console.log('eslint');
 };
