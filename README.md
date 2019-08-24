@@ -1,2 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
+# front-proj-brain-games
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/a174313e685af6d7e7a8/maintainability)](https://codeclimate.com/github/morphizm/frontend-project-lvl1/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a174313e685af6d7e7a8/test_coverage)](https://codeclimate.com/github/morphizm/frontend-project-lvl1/test_coverage)
