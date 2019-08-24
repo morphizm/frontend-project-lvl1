@@ -24,4 +24,8 @@ $ npm install front-proj-brain-games
 
 ## brain-progression
 
-[![asciicast](https://asciinema.org/a/hZe1nof3nKBlZ764p0P61xCy9.svg)](https://asciinema.org/a/hZe1nof3nKBlZ764p0P61xCy9)
+[![asciicast](https://asciinema.org/a/f7QHvmHoApVtXenI7vZBQWniu.svg)](https://asciinema.org/a/f7QHvmHoApVtXenI7vZBQWniu)
+
+## brain-prime
+
+[![asciicast](https://asciinema.org/a/9H7Txsd6u18VpSwPuJ4miTY6I.svg)](https://asciinema.org/a/9H7Txsd6u18VpSwPuJ4miTY6I)

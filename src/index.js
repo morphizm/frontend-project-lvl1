@@ -16,7 +16,7 @@ const run = (text, dataToGame, check) => {
     const [question, ...rest] = data;
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = check(rest);
+    const correctAnswer = String(check(rest));
     if (correctAnswer === userAnswer) {
       iter(trueAnswers + 1, dataToGame());
       return;

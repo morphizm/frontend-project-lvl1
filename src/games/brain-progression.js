@@ -15,7 +15,7 @@ const generateProggression = () => {
 };
 
 export default () => {
-  const text = 'Find the greatest common divisior of given numbers.';
+  const text = 'What number is missing in the progression?';
   const dataToGame = () => {
     const progression = generateProggression();
     const shadeElement = generateRandomNumber(0, 9);
@@ -27,7 +27,7 @@ export default () => {
   const check = (array) => {
     const [progression, shadeElement] = array;
     const element = progression[shadeElement];
-    return String(element);
+    return element;
   };
   return run(text, dataToGame, check);
 };

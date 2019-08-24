@@ -14,7 +14,7 @@ export default () => {
     const gcd = (lesser, bigger) => {
       const findGcd = (num) => {
         if (lesser % num === 0 && bigger % num === 0) {
-          return String(num);
+          return num;
         }
         return findGcd(num - 1);
       };

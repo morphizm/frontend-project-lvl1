@@ -23,12 +23,12 @@ export default () => {
   const check = (array) => {
     const [num1, num2, sign] = array;
     if (sign === '+') {
-      return String(num1 + num2);
+      return num1 + num2;
     }
     if (sign === '-') {
-      return String(num1 - num2);
+      return num1 - num2;
     }
-    return String(num1 * num2);
+    return num1 * num2;
   };
   return run(text, dataToGame, check);
 };
