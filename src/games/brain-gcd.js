@@ -9,7 +9,7 @@ export default () => {
     const question = `${num1} ${num2}`;
     return [question, num1, num2];
   };
-  const checker = (array) => {
+  const check = (array) => {
     const [num1, num2] = array;
     const gcd = (lesser, bigger) => {
       const findGcd = (num) => {
@@ -22,5 +22,5 @@ export default () => {
     };
     return num1 > num2 ? gcd(num2, num1) : gcd(num1, num2);
   };
-  return run(text, dataToGame, checker);
+  return run(text, dataToGame, check);
 };

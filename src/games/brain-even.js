@@ -8,6 +8,6 @@ export default () => {
     const question = num;
     return [question, num];
   };
-  const checker = (num) => (num % 2 === 0 ? 'yes' : 'no');
-  return run(text, dataToGame, checker);
+  const check = (num) => (num % 2 === 0 ? 'yes' : 'no');
+  return run(text, dataToGame, check);
 };

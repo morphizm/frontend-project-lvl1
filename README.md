@@ -21,3 +21,7 @@ $ npm install front-proj-brain-games
 ## brain-gcd
 
 [![asciicast](https://asciinema.org/a/rGNKcbVZ31z9XcxioRsstXgrg.svg)](https://asciinema.org/a/rGNKcbVZ31z9XcxioRsstXgrg)
+
+## brain-progression
+
+[![asciicast](https://asciinema.org/a/hZe1nof3nKBlZ764p0P61xCy9.svg)](https://asciinema.org/a/hZe1nof3nKBlZ764p0P61xCy9)

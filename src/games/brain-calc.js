@@ -20,7 +20,7 @@ export default () => {
     const question = `${num1} ${sign} ${num2}`;
     return [question, num1, num2, sign];
   };
-  const checker = (array) => {
+  const check = (array) => {
     const [num1, num2, sign] = array;
     if (sign === '+') {
       return String(num1 + num2);
@@ -30,5 +30,5 @@ export default () => {
     }
     return String(num1 * num2);
   };
-  return run(text, dataToGame, checker);
+  return run(text, dataToGame, check);
 };
