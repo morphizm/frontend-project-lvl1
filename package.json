@@ -1,6 +1,6 @@
 {
   "name": "front-proj-brain-games",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Brain Games from Hexlet",
   "keywords": [
     "brain-calc",
@@ -9,7 +9,7 @@
     "brain-prime",
     "brain-progression"
   ],
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "babel-node": "babel-node",
     "eslint": "eslint",
