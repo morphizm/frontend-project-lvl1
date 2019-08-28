@@ -2,14 +2,18 @@ import run from '..';
 import generateRandomNumber from '../utils';
 
 const generateSign = (num) => {
-  const operations = ['+', '-', '*'];
+  const operations = {
+    plus: '+',
+    minus: '-',
+    multiplication: '*',
+  };
   if (num < 10) {
-    return operations[2];
+    return operations.multiplication;
   }
   if (num > 20) {
-    return operations[1];
+    return operations.minus;
   }
-  return operations[0];
+  return operations.plus;
 };
 
 const calculate = (num1, num2, sign) => {
