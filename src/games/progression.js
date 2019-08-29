@@ -1,29 +1,29 @@
 import run from '..';
 import generateRandomNumber from '../utils';
 
-const generateProggression = () => {
-  const step = generateRandomNumber(1, 30);
-  const startNum = generateRandomNumber();
-  const iter = (array) => {
-    const len = array.length;
+const generateProggression = (start, step) => {
+  const iter = (progression) => {
+    const len = progression.length;
     if (len === 10) {
-      return array;
+      return progression;
     }
-    return iter([...array, array[len - 1] + step]);
+    return iter([...progression, progression[len - 1] + step]);
   };
-  return iter([startNum]);
+  return iter([start]);
 };
 
 const gameDescription = 'What number is missing in the progression?';
 
 export default () => {
   const generateGameData = () => {
-    const progression = generateProggression();
-    const hideElement = generateRandomNumber(0, progression.length - 1);
-    const correctAnswer = progression[hideElement];
-    progression[hideElement] = '...';
-    const question = progression.join(' ');
-    return [question, correctAnswer];
+    const stepForProgression = generateRandomNumber(1, 30);
+    const startForProgression = generateRandomNumber();
+    const progression = generateProggression(startForProgression, stepForProgression);
+    const hiddenElementIndex = generateRandomNumber(0, progression.length - 1);
+    const correctAnswer = progression[hiddenElementIndex];
+    progression[hiddenElementIndex] = '...';
+    const questionOfRound = progression.join(' ');
+    return [questionOfRound, correctAnswer];
   };
 
   return run(gameDescription, generateGameData);

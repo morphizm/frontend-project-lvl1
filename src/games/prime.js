@@ -16,13 +16,11 @@ const isPrime = (num) => {
   return iter(num - 1);
 };
 
-const checkPrime = (num) => (isPrime(num) ? 'yes' : 'no');
-
 export default () => {
   const generateGameData = () => {
-    const num = generateRandomNumber(1, 100);
-    const correctAnswer = checkPrime(num);
-    return [num, correctAnswer];
+    const questionOfRound = generateRandomNumber(1, 100);
+    const correctAnswer = isPrime(questionOfRound) ? 'yes' : 'no';
+    return [questionOfRound, correctAnswer];
   };
   return run(gameDescription, generateGameData);
 };
