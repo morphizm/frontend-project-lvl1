@@ -16,10 +16,10 @@ const gameDescription = 'What number is missing in the progression?';
 
 export default () => {
   const generateGameData = () => {
-    const stepForProgression = generateRandomNumber(1, 30);
-    const startForProgression = generateRandomNumber();
-    const lengthOfProgression = 10;
-    const progression = generateProggression(startForProgression, stepForProgression, lengthOfProgression);
+    const stepForProgr = generateRandomNumber(1, 30);
+    const startForProgr = generateRandomNumber();
+    const lengthOfProgr = 10;
+    const progression = generateProggression(startForProgr, stepForProgr, lengthOfProgr);
     const hiddenElementIndex = generateRandomNumber(0, progression.length - 1);
     const correctAnswer = progression[hiddenElementIndex];
     progression[hiddenElementIndex] = '...';
