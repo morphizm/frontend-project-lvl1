@@ -1,31 +1,29 @@
 import run from '..';
 import generateRandomNumber from '../utils';
 
-const generateProggression = (start, step, lengthProgr) => {
-  const iter = (progression) => {
-    const len = progression.length;
-    if (len === lengthProgr) {
-      return progression;
+const generateProggression = (start, step, lengthOfProgression) => {
+  const iter = (progression, counter) => {
+    if (counter === lengthOfProgression) {
+      return [start, ...progression];
     }
-    return iter([...progression, progression[len - 1] + step]);
+    return iter([...progression, (start + counter * step)], counter + 1);
   };
-  return iter([start]);
+  return iter([], 1);
 };
 
 const gameDescription = 'What number is missing in the progression?';
 
-export default () => {
-  const generateGameData = () => {
-    const stepForProgr = generateRandomNumber(1, 30);
-    const startForProgr = generateRandomNumber();
-    const lengthOfProgr = 10;
-    const progression = generateProggression(startForProgr, stepForProgr, lengthOfProgr);
-    const hiddenElementIndex = generateRandomNumber(0, progression.length - 1);
-    const correctAnswer = progression[hiddenElementIndex];
-    progression[hiddenElementIndex] = '...';
-    const questionOfRound = progression.join(' ');
-    return [questionOfRound, correctAnswer];
-  };
+const lengthOfProgression = 10;
 
-  return run(gameDescription, generateGameData);
+const generateGameData = () => {
+  const step = generateRandomNumber(1, 30);
+  const start = generateRandomNumber();
+  const progression = generateProggression(start, step, lengthOfProgression);
+  const hiddenElementIndex = generateRandomNumber(0, progression.length - 1);
+  const correctAnswer = progression[hiddenElementIndex];
+  progression[hiddenElementIndex] = '...';
+  const questionOfRound = progression.join(' ');
+  return [questionOfRound, String(correctAnswer)];
 };
+
+export default () => run(gameDescription, generateGameData);

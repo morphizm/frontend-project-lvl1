@@ -4,23 +4,21 @@ import generateRandomNumber from '../utils';
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
-  const iter = (element) => {
-    if (element === 1) {
-      return true;
-    }
-    if (num % element === 0) {
+  if (num < 0) {
+    return false;
+  }
+  for (let i = num - 1; i !== 1; i -= 1) {
+    if (num % i === 0) {
       return false;
     }
-    return iter(element - 1);
-  };
-  return iter(num - 1);
+  }
+  return true;
 };
 
-export default () => {
-  const generateGameData = () => {
-    const questionOfRound = generateRandomNumber(1, 100);
-    const correctAnswer = isPrime(questionOfRound) ? 'yes' : 'no';
-    return [questionOfRound, correctAnswer];
-  };
-  return run(gameDescription, generateGameData);
+const generateGameData = () => {
+  const question = generateRandomNumber(1, 100);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
+
+export default () => run(gameDescription, generateGameData);

@@ -3,25 +3,21 @@ import generateRandomNumber from '../utils';
 
 const gameDescription = 'Find the greatest common divisior of given numbers.';
 
-const calculateGcd = (num1, num2) => {
-  const gcd = (lesser, bigger) => {
-    for (let i = lesser; i !== 1; i -= 1) {
-      if (lesser % i === 0 && bigger % i === 0) {
-        return i;
-      }
+const findGcd = (num1, num2) => {
+  for (let i = num1 > num2 ? num2 : num1; i !== 1; i -= 1) {
+    if (num1 % i === 0 && num2 % i === 0) {
+      return i;
     }
-    return 1;
-  };
-  return num1 > num2 ? gcd(num2, num1) : gcd(num1, num2);
+  }
+  return 1;
 };
 
-export default () => {
-  const generateGameData = () => {
-    const num1 = generateRandomNumber(1, 100);
-    const num2 = generateRandomNumber(1, 100);
-    const questionOfRound = `${num1} ${num2}`;
-    const correctAnswer = calculateGcd(num1, num2);
-    return [questionOfRound, correctAnswer];
-  };
-  return run(gameDescription, generateGameData);
+const generateGameData = () => {
+  const num1 = generateRandomNumber(1, 100);
+  const num2 = generateRandomNumber(1, 100);
+  const question = `${num1} ${num2}`;
+  const correctAnswer = findGcd(num1, num2);
+  return [question, String(correctAnswer)];
 };
+
+export default () => run(gameDescription, generateGameData);
