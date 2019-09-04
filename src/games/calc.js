@@ -19,10 +19,9 @@ const gameDescription = 'What is result of the expression?';
 const generateGameData = () => {
   const num1 = generateRandomNumber();
   const num2 = generateRandomNumber(0, 30);
-  const randomIndex = generateRandomNumber(0, operations.length);
-  const sign = operations[randomIndex];
-  const question = `${num1} ${sign} ${num2}`;
-  const correctAnswer = calculate(num1, num2, sign);
+  const operation = operations[generateRandomNumber(0, operations.length - 1)];
+  const question = `${num1} ${operation} ${num2}`;
+  const correctAnswer = calculate(num1, num2, operation);
   return [question, String(correctAnswer)];
 };
 

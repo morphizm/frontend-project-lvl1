@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const numberOfResponse = 3;
+const numberOfResponseCount = 3;
 const startNumberOfResponse = 0;
 
 const run = (gameDescription, generateGameData) => {
@@ -11,7 +11,7 @@ const run = (gameDescription, generateGameData) => {
   console.log(`Hello, ${userName}!`);
 
   const iter = (counter) => {
-    if (counter === numberOfResponse) {
+    if (counter === numberOfResponseCount) {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
@@ -20,7 +20,7 @@ const run = (gameDescription, generateGameData) => {
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (correctAnswer === userAnswer) {
-      iter(counter + 1, generateGameData());
+      iter(counter + 1);
       return;
     }
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
