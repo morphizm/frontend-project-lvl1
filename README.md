@@ -10,7 +10,7 @@ $ npm install front-proj-brain-games
 ```
 
 ## brain-even
-
+<script id="asciicast-6hB3Pr6rCxNOz6jE0J9ysMMsv" src="https://asciinema.org/a/6hB3Pr6rCxNOz6jE0J9ysMMsv.js" async></script>
 [![asciicast](https://asciinema.org/a/6hB3Pr6rCxNOz6jE0J9ysMMsv.svg)](https://asciinema.org/a/6hB3Pr6rCxNOz6jE0J9ysMMsv)
 
 ## brain-calc
