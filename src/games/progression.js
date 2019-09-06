@@ -1,7 +1,7 @@
 import run from '..';
 import generateRandomNumber from '../utils';
 
-const generateProggression = (start, step, lengthOfProgression) => {
+const generateProgression = (start, step, lengthOfProgression) => {
   const iter = (progression, counter) => {
     if (counter === lengthOfProgression) {
       return progression;
@@ -18,7 +18,7 @@ const length = 10;
 const generateGameData = () => {
   const step = generateRandomNumber(1, 30);
   const start = generateRandomNumber();
-  const progression = generateProggression(start, step, length);
+  const progression = generateProgression(start, step, length);
   const hiddenElementIndex = generateRandomNumber(0, length - 1);
   const correctAnswer = progression[hiddenElementIndex];
   progression[hiddenElementIndex] = '...';
